@@ -31,5 +31,5 @@ mix.webpackConfig({
 }).react();
 
 // used to run app using reactjs
-mix.js('resources/patient-information/src/index.js', 'public/js/app.js').version();
+mix.react('public/js/src/index.js', 'public/js/patients-app.js');
 mix.copy('resources/patient-information/public', 'public');

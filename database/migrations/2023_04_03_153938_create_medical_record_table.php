@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('medical_record', function (Blueprint $mrecord) {
             $mrecord->id();
             $mrecord->string("medical_record");
-            $mrecord->timestamp('updated_at')->nullable();
+            $mrecord->timestamps();
         });
     }
 
