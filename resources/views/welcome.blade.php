@@ -40,7 +40,7 @@
                     <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                     <div class="card-body p-4 p-md-5">
                         <h5 class="mb-4 pb-2 pb-md-0 mb-md-5">1. Patient Identification Information</h5>
-                        <form>
+                        <form action="http://127.0.0.1:8000/api/patient" method="post">
 
                         <div class="row">
                             <div class="col-md-2 mb-2">
@@ -53,7 +53,7 @@
                             <div class="col-md-2 mb-2">
 
                             <div class="form-outline">
-                                <input type="text" id="last_name" class="form-control form-control-lg" />
+                                <input type="text" id="last_name" name="last_name" class="form-control form-control-lg" />
                                 <label class="form-label" for="last_name">Last Name</label>
                             </div>
 
@@ -61,7 +61,7 @@
                             <div class="col-md-2 mb-2">
 
                             <div class="form-outline">
-                                <input type="text" id="first_name" class="form-control form-control-lg" />
+                                <input type="text" id="first_name" name="first_name" class="form-control form-control-lg" />
                                 <label class="form-label" for="first_Name">First Name</label>
                             </div>
 
@@ -69,7 +69,7 @@
                             <div class="col-md-2 mb-2">
 
                             <div class="form-outline">
-                                <input type="text" id="middle_name_initial" class="form-control form-control-lg" />
+                                <input type="text" id="middle_name_initial" name="middle_name_initial" class="form-control form-control-lg" />
                                 <label class="form-label" for="middle_name_initial">Middle Initial</label>
                             </div>
 
@@ -77,7 +77,7 @@
                             <div class="col-md-2 mb-2">
 
                             <div class="form-outline">
-                                <input type="date" id="date_of_birth" class="form-control form-control-lg" />
+                                <input type="date" id="date_of_birth" name="date_of_birth" class="form-control form-control-lg" />
                                 <label class="form-label" for="date_of_birth">Date of Birth</label>
                             </div>
 
@@ -91,14 +91,14 @@
                                 <div class="col-sm-6">Sex:</div>
                                 <div class="">
                                     <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">
+                                    <input class="form-check-input" name="sex" type="checkbox" id="sex">
+                                    <label class="form-check-label" for="sex">
                                         Male
                                     </label>
                                     </div>
                                     <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">
+                                    <input class="form-check-input" name="sex" type="checkbox" id="sex">
+                                    <label class="form-check-label" for="sex">
                                         Female
                                     </label>
                                     </div>
@@ -109,7 +109,7 @@
                         <div class="col-md-2 mb-2 d-flex align-items-center">
 
                             <div class="form-outline datepicker w-100">
-                                <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                                <input type="text" name="age" class="form-control form-control-lg" id="age" />
                                 <label for="birthdayDate" class="form-label">Age</label>
                             </div>
 
@@ -118,29 +118,29 @@
                             <h6 class="mb-4 pb-1">Race: </h6>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="femaleGender"
+                                <input class="form-check-input" type="checkbox" name="race" id="femaleGender"
                                 value="option1" checked />
                                 <label class="form-check-label" for="femaleGender">White</label>
                             </div>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="maleGender"
+                                <input class="form-check-input" type="checkbox" name="race" id="maleGender"
                                 value="option2" />
                                 <label class="form-check-label" for="maleGender">Black</label>
                             </div>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="otherGender"
+                                <input class="form-check-input" type="checkbox" name="race" id="otherGender"
                                 value="option3" />
                                 <label class="form-check-label" for="otherGender">Asian/pacific islander</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="otherGender"
+                                <input class="form-check-input" type="checkbox" name="race" id="otherGender"
                                 value="option3" />
                                 <label class="form-check-label" for="otherGender">unknown</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="otherGender"
+                                <input class="form-check-input" type="checkbox" name="race" id="otherGender"
                                 value="option3" />
                                 <label class="form-check-label" for="otherGender">Other</label>
                             </div>
@@ -151,18 +151,18 @@
 
                             <div class="form-check form-check-inline">
 
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="femaleGender"
+                                <input class="form-check-input" type="checkbox" name="HorL" id="femaleGender"
                                 value="option1" checked />
                                 <label class="form-check-label" for="femaleGender">Yes</label>
                             </div>
 
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="maleGender"
+                                <input class="form-check-input" type="checkbox" name="HorL" id="maleGender"
                                 value="option2" />
                                 <label class="form-check-label" for="maleGender">No</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="maleGender"
+                                <input class="form-check-input" type="checkbox" name="HorL" id="maleGender"
                                 value="option2" />
                                 <label class="form-check-label" for="maleGender">Unknown</label>
                             </div>
@@ -176,30 +176,30 @@
                                 <p class="mb-2 pb-1"><b>Facility: (if hospitalized)</b></p>
                                 <div class="row">
                                     <div class="form-group row">
-                                        <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+                                        <label for="f_name" class="col-sm-2 col-form-label">Name</label>
                                         <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="inputPassword">
+                                          <input type="text" name="f_name" class="form-control" id="f_name">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inputPassword" class="col-sm-2 col-form-label">City</label>
+                                        <label for="facility_city" class="col-sm-2 col-form-label">City</label>
                                         <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="inputPassword">
+                                          <input type="text" name="facility_city" class="form-control" id="facility_city">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="inputPassword" class="col-sm-2 col-form-label">County</label>
+                                        <label for="facility_county" class="col-sm-2 col-form-label">County</label>
                                         <div class="col-sm-6">
-                                          <input type="text" class="form-control" id="inputPassword">
+                                          <input type="text" name="facility_county" class="form-control" id="facility_county">
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6 mb-4 pb-2">
 
                                             <div class="form-group row">
-                                                <label for="inputPassword" class="col-sm-4 col-form-label">State</label>
+                                                <label for="facility_state" class="col-sm-4 col-form-label">State</label>
                                                 <div class="col-sm-6">
-                                                  <input type="text" class="form-control" id="inputPassword">
+                                                  <input type="text" name="facility_state" class="form-control" id="facility_state">
                                                 </div>
                                             </div>
 
@@ -207,9 +207,9 @@
                                         <div class="col-md-6 mb-4 pb-2">
 
                                             <div class="form-group row">
-                                                <label for="inputPassword" class="col-sm-4 col-form-label">Phone Number</label>
+                                                <label for="facility_phone" class="col-sm-4 col-form-label">Phone Number</label>
                                                 <div class="col-sm-6">
-                                                  <input type="text" class="form-control" id="inputPassword">
+                                                  <input type="text" name="facility_phone" class="form-control" id="facility_phone">
                                                 </div>
                                             </div>
 
@@ -224,30 +224,30 @@
 
                                     <div class="row">
                                         <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Fiacility Name(if applicable)</label>
+                                            <label for="facility_name" class="col-sm-2 col-form-label">Fiacility Name(if applicable)</label>
                                             <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="inputPassword">
+                                              <input type="text" name="facility_name" class="form-control" id="facility_name">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">Street</label>
+                                            <label for="street" class="col-sm-2 col-form-label">Street</label>
                                             <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="inputPassword">
+                                              <input type="text" name="street" class="form-control" id="street">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-2 col-form-label">City</label>
+                                            <label for="city" class="col-sm-2 col-form-label">City</label>
                                             <div class="col-sm-6">
-                                              <input type="text" class="form-control" id="inputPassword">
+                                              <input type="text" name="city" class="form-control" id="city">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 mb-4 pb-2">
     
                                                 <div class="form-group row">
-                                                    <label for="inputPassword" class="col-sm-4 col-form-label">County</label>
+                                                    <label for="county" class="col-sm-4 col-form-label">County</label>
                                                     <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="inputPassword">
+                                                      <input type="text" name="county" class="form-control" id="county">
                                                     </div>
                                                 </div>
     
@@ -255,9 +255,9 @@
                                             <div class="col-md-6 mb-4 pb-2">
     
                                                 <div class="form-group row">
-                                                    <label for="inputPassword" class="col-sm-4 col-form-label">State</label>
+                                                    <label for="state" class="col-sm-4 col-form-label">State</label>
                                                     <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="inputPassword">
+                                                      <input type="text" name="state" class="form-control" id="state">
                                                     </div>
                                                 </div>
     
@@ -268,9 +268,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label"><b>Medical Record#:</b></label>
+                            <label for="medical_record" class="col-sm-2 col-form-label"><b>Medical Record#:</b></label>
                             <div class="col-sm-4">
-                              <input type="text" class="form-control" id="inputPassword">
+                              <input type="text" name="medical_record" class="form-control" id="medical_record">
                             </div>
                         </div>
 
