@@ -16,12 +16,12 @@ return new class extends Migration
             $patient->string("last_name");
             $patient->string("first_name");
             $patient->string("middle_name_initials");
-            $patient->date("date_of_birth");
+            $patient->date("mm-dd-yyyy");
             $patient->string("sex");
             $patient->string("age");
             $patient->string("race");
             $patient->string("HorL");
-            $patient->timestamp('updated_at')->nullable();
+            $patient->timestamps();
         });
     }
 

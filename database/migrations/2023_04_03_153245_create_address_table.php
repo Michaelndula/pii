@@ -18,6 +18,7 @@ return new class extends Migration
             $address->string("city");
             $address->string("county");
             $address->string("state");
+            $address->timestamps();
         });
     }
 

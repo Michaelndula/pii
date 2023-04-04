@@ -25,7 +25,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/patient', [PatientController::class, 'Patient']);
-Route::post('/patient', [FacilityController::class, 'Facility']);
-Route::post('/patient', [AddressController::class, 'Address']);
-Route::post('/patient', [MedicalRecordController::class, 'MedicalRecord']);
+Route::post('/facility', [FacilityController::class, 'Facility']);
+Route::post('/address', [AddressController::class, 'Address']);
+Route::post('/medical_record', [MedicalRecordController::class, 'MedicalRecord']);
 Route::get('/patient', [PatientController::class, 'Patient']);

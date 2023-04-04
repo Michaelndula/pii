@@ -15,9 +15,9 @@ class MedicalRecordController extends Controller
         $results = $medical_record->save();
 
         if($results){
-            return ["results"=>"Patient Created"];
+            return ["results"=>"Medical Record Created"];
         }else{
-            return ["results"=>"Patient not sent"];
+            return ["results"=>"Medical Record not sent"];
         }
 
     }

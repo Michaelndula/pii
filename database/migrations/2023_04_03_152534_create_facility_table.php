@@ -18,6 +18,7 @@ return new class extends Migration
             $facility->string("facility_county");
             $facility->string("facility_state");
             $facility->string("facility_phone");
+            $facility->timestamps();
         });
     }
 
